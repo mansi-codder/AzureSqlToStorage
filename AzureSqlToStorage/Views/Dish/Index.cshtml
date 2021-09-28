@@ -1,0 +1,38 @@
+﻿@model IEnumerable<AzureSqlToStorage.Models.Dish>
+@{
+    ViewData["Title"] = "Home page";
+}
+<head>
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<div class="text-center">
+    <h1 class="display-4">This is a list of Dishes available today </h1>
+
+</div>
+
+<div>
+    <table class="table" table-dark">
+        <thead>
+            <tr>
+                <th scope="col">Dish ID</th>
+                <th scope="col">For Dish</th>
+                <th scope="col">Dish Name</th>
+                <th scope="col">Rating</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dish in Model)
+            {
+            <tr>
+                <th scope="row">@dish.DishID</th>
+                <th scope="row"><img src="@dish.DishImage" width="400" height="100"></th>
+                <td>@dish.DishName</td>
+                <td>@dish.Rating</td>
+            </tr>
+            }            
+        </tbody>
+    </table>
+</div>
