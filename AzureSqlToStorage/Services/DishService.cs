@@ -11,11 +11,10 @@ namespace AzureSqlToStorage.Services
         // Ensure to change the below variables to reflect the connection details for your database
         private static string db_source = "deemoserver.database.windows.net";
         private static string db_user = "mansi";
-        private static string db_password = "Sahil@14";
-        private static string db_database = "demodb ";
+        private static string db_password = "";
+        private static string db_database = "emodb ";
 
-        private SqlConnection GetConnection()
-        {
+        private SqlConnection GetConnection()        {
             // Here we are creating the SQL connection
             var _builder = new SqlConnectionStringBuilder();
             _builder.DataSource = db_source;
